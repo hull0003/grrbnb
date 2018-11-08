@@ -1,123 +1,198 @@
-@import url('some google sans-serif font');
+@import url('https://fonts.googleapis.com/css?family=Fahkwang');
 /* make sure to select a new google font and use it for your header */
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 *::after,
-*::before{
+*::before {
     box-sizing: inherit;
 }
-html{
+
+html {
     font-size: 20px;
     line-height: 1.5;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-family: 'Fahkwang', Helvetica, Arial, sans-serif;
+    ;
 }
-main{
+
+main {
     width: 90%;
     margin: 0 auto;
-    border: 1px solid #aaa;
+    border: 1px solid #87A66B;
+
+
 }
-header{
-    /* Photo by Wyatt Ryan on Unsplash */
+
+header {
+    /* Photo by Guillaume LORAIN on Unsplash */
     /* Replace this with an image that you select */
-    background-image: url(../img/wyatt-ryan-367017-unsplash.jpg);
+    background-image: url(../img/guillaume-lorain-716804-unsplash.jpg);
     background-size: 100% auto;
     background-position: center center;
 }
-header h1{
+
+header h1 {
     font-size: 4rem;
     line-height: 4rem;
     padding: 1rem 1rem;
-    color: rgba(250,250,250, 0.7);
-    text-shadow: 2px 2px 4px #835A59;
+    color: hsl(45, 45%, 90%);
+    text-shadow: 2px 2px 4px #87A66B;
     vertical-align: top;
     text-align: right;
     min-height: 12rem;
 }
-header img{
+
+header img {
     width: 15%;
-    float:left;
+    float: left;
     margin-right: 1rem;
 }
-form{
+
+form {
     padding: 1rem 1rem 2rem;
+    background-color: hsl(45, 45%, 85%);
 }
-.form-box{
+
+.form-box {
     padding: 0.25rem 0 1rem;
 }
-label{
+
+label {
     display: block;
     margin: 0;
     font-size: 1rem;
-    color: #3F1F24;
+    color: hsl(92, 25%, 45%);
+
 }
-input{
-    margin:0;
+
+input {
+    margin: 0;
     font-size: 1rem;
     padding: 0.2rem 1rem;
     width: 100%;
-    color: #835A59;
-}
-input#min.price::after,
-input.price#max::after{
-    content: "$" attr(data-price);
-    display: block;
-    margin-top: -1.5rem;
-    color: #835A59;
+    color: #A02E49;
+    border-style: solid;
+    border-radius: .5em;
+    background-color: hsl(45, 45%, 95%);
 }
 
-.search-btn{
+::placeholder {
+    color: #A02E49;
+}
+
+
+
+input#min.price::after,
+input.price#max::after {
+    content: "$"attr(data-price);
+    display: block;
+    margin-top: -1.5rem;
+
+}
+
+.search-btn {
     font-size: 1rem;
     line-height: 1.5;
     padding: 0.25rem 1rem;
-    background-color:#D16641;
-    color: #fff;
+    color: hsl(45, 45%, 95%);
+    background-color: #A02E49;
+    border-style: solid;
+    border-radius: .5em;
 }
-@media all and (min-width:650px){
-    form{
+
+.search-btn:hover {
+    color: hsl(45, 45%, 95%);
+    bacground-color: #A02E49;
+    opacity: 0.4;
+}
+
+.search-btn:active {
+    background-color: hsl(45, 45%, 95%);
+    color: #A02E49;
+}
+
+@media all and (min-width:650px) {
+    form {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
     }
-    .form-box{
+
+    .form-box {
         flex-basis: 100%;
     }
+
     .form-box.check-in,
     .form-box.check-out,
     .form-box.min-price,
     .form-box.max-price,
     .form-box.dogs,
-    .form-box.search{
+    .form-box.search {
         flex-basis: 50%;
     }
-    .form-box.search{
+
+    .form-box.search {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        align-items:flex-end;
+        align-items: flex-end;
     }
+
     .form-box.dogs,
     .form-box.min-price,
-    .form-box.max-price{
+    .form-box.max-price {
         padding-right: 1rem;
     }
 }
-@media all and (min-width:1000px){
-    main{
-        display:flex;
+
+@media (min-width: 651px) and (max-width: 999px) {
+    .form-box {
+        flex-basis: 100%;
+    }
+
+    .form-box.check-in,
+    .form-box.check-out,
+    .form-box.min-price,
+    .form-box.max-price,
+    .form-box.dogs,
+    .form-box.search {
+        flex-basis: 50%;
+    }
+
+    .form-box.search {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .form-box.dogs,
+    .form-box.check-in,
+    .form-box.check-out .form-box.min-price,
+    .form-box.max-price {
+        padding-right: 1rem;
+    }
+}
+
+@media all and (min-width:1000px) {
+    main {
+        display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: stretch;
         max-width: 1200px;
     }
-    header{
+
+    header {
         flex-basis: 30%;
         background-size: auto 100%;
     }
-    form{
+
+    form {
         flex-basis: 70%;
     }
 }
