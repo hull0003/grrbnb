@@ -54,7 +54,7 @@ header img {
 
 form {
     padding: 1rem 1rem 2rem;
-    background-color: hsl(45, 45%, 85%);
+    background-color: hsl(45, 45%, 93%);
 }
 
 .form-box {
@@ -84,7 +84,10 @@ input {
     color: #A02E49;
 }
 
-
+/*
+input[type=range]::-webkit-slider-runnable-track {
+    color: #A02E49;
+}*/
 
 input#min.price::after,
 input.price#max::after {
@@ -106,7 +109,7 @@ input.price#max::after {
 
 .search-btn:hover {
     color: hsl(45, 45%, 95%);
-    bacground-color: #A02E49;
+    background-color: #A02E49;
     opacity: 0.4;
 }
 
